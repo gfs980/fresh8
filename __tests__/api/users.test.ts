@@ -48,6 +48,7 @@ describe('testing user api', () => {
 
         expect(res._getStatusCode()).toBe(200);
         expect(users.length).toBe(100);
+        expect(Object.keys(users[0])).toStrictEqual(['name', 'email', 'location']);
     });
 
     it('Should receive only users with matched mi letters', async () => {
